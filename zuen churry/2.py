@@ -32,4 +32,4 @@ watch_list=np.array(watch_list)        #watch데이터 프레임 리스트로 �
 
 
 
-np.sum(watch_list[a,b:c])       # 함수 만들어야 됨 a 날짜,b시작시간~c끝시간
+np.sum(watch_list[a,b:c])       # 함수 만들어야 됨 a 날짜,b시작시간~c끝시간.
