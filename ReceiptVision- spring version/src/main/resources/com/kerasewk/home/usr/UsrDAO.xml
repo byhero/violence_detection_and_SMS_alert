@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kerasewk.home.usr.UsrDAO">
+
+    <select id="getUsr" parameterType="UsrDTO" resultType="UsrDTO">
+	select usr_no, usr_name, usr_id, usr_level, usr_status
+    from   t_usr
+    where  usr_id=#{usr_id} and usr_pw=#{usr_pw}
+	</select>
+	
+	<select id="countUsrId" parameterType="String" resultType="int">
+	select count(*) as cnt 
+	from t_usr 
+	where usr_id = #{usr_id}
+	</select>
+	
+	<insert id="regist" parameterType="UsrDTO">
+	insert into t_usr(usr_no, usr_id, usr_pw, usr_name, usr_zipcode, usr_address,usr_address_detail)
+	values(seq_usr.nextval, #{usr_id}, #{usr_pw}, #{usr_name}, #{usr_zipcode}, #{usr_address}, #{usr_address_detail} )
+	</insert>
+</mapper>
