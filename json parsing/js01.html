@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            
+            window.onload = function(){
+                document.getElementById('btn1').onclick = function shift_right() {
+                    //alert(document.smform.t1.value);
+                    document.smform.t2.value = document.smform.t1.value;
+                    document.smform.t1.value = '';
+                }
+                document.getElementById('btn2').onclick = function shift_left() {
+                    //alert(document.smform.t1.value);
+                    document.smform.t1.value = document.smform.t2.value;
+                    document.smform.t2.value = '';
+                }
+            }
+            
+
+
+        </script>
+    </head>
+<body>
+<form name="smform">
+<table>
+<tr>
+    <td><textarea name="t1" rows="5" cols="40"></textarea>    </td>
+    <td>
+        <input type="button" value="→" id="btn1" /><br/>
+        <input type="button" value="←" id="btn2" /><br/>
+    </td>
+    <td><textarea name="t2" rows="5" cols="40"></textarea>    </td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
+
+ 

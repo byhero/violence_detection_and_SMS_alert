@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            jquery
+        </title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            /*
+            window.onload = function(){
+                document.getElementById('btn1').onclick = function shift_right() {
+                    //alert(document.smform.t1.value);
+                    document.smform.t2.value = document.smform.t1.value;
+                    document.smform.t1.value = '';
+                }
+                document.getElementById('btn2').onclick = function shift_left() {
+                    //alert(document.smform.t1.value);
+                    document.smform.t1.value = document.smform.t2.value;
+                    document.smform.t2.value = '';
+                }
+            }
+            */
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                    $('#t2').val(
+                        $('#t1').val()  
+                    );
+                    $('#t1').val('');
+                });
+                $('#btn2').click(function(){
+                    $('#t1').val(
+                        $('#t2').val()  
+                    );
+                    $('#t2').val('');
+                });
+            });
+
+
+        </script>
+    </head>
+<body>
+<form name="smform">
+<table>
+<tr>
+    <td><textarea id="t1" name="t1" rows="5" cols="40">헬로~</textarea>    </td>
+    <td>
+        <input type="button" value="→" id="btn1" /><br/>
+        <input type="button" value="←" id="btn2" /><br/>
+    </td>
+    <td><textarea id="t2" name="t2" rows="5" cols="40"></textarea>    </td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
+
+ 

@@ -1,0 +1,82 @@
+<html>
+<head>
+
+</head>
+<body>
+
+
+<script>
+    var result = {
+    "testImageUrl": "https://ocr-kr.ncloud.com/upload/3346/test/04588f2bffd14bf3a03143835b1f02eb",
+    "uid": "67cd7da49c5f4c8d98b43701fe9a5e19",
+    "name": "jpg",
+    "inferResult": "SUCCESS",
+    "message": "SUCCESS",
+    "matchedTemplate": {
+        "id": 3900,
+        "name": "kerasseuk"
+    },
+    "validationResult": {
+        "result": "NO_REQUESTED"
+    },
+    "title": {
+        "name": "영수증아메리카노",
+        "boundingPoly": {
+            "vertices": [
+                {
+                    "x": 747.25,
+                    "y": 214.375
+                },
+                {
+                    "x": 1490.4166,
+                    "y": 214.375
+                },
+                {
+                    "x": 1490.4166,
+                    "y": 1098.847
+                },
+                {
+                    "x": 747.25,
+                    "y": 1101.5935
+                }
+            ]
+        },
+        "inferText": "영 수 증\n상호 : 숨맑은집\n사업자번호 :108-30-42335 대표자:박병준\n주소:경기 군포시 산본로323번길 22 202호\n전화번호  031-426-0157\n2020년08월09일 18:21 01-0117 초기사용자\n메뉴명 단가 수량 금액\n진동벨7\n0  0\nice 아메리카노 밀레\n4,300 1 4,300\n판매금액 4, 300\n과세공급가액 3,910\n부가세액 390\n신용카드 4,300",
+        "inferConfidence": 0.99553293
+    },
+    "fields": [
+        {
+            "name": "영수증판독",
+            "valueType": "ALL",
+            "boundingPoly": {
+                "vertices": [
+                    {
+                        "x": 489.479,
+                        "y": 1141.2916
+                    },
+                    {
+                        "x": 1302.5834,
+                        "y": 1141.2916
+                    },
+                    {
+                        "x": 1302.5834,
+                        "y": 1553.7084
+                    },
+                    {
+                        "x": 490.18045,
+                        "y": 1553.7084
+                    }
+                ]
+            },
+            "inferText": "카드명 롯데\n카드번호 5137-92**-****-****\n공급금액 3,910 원\n부가세금액: 390 원\n승인금액 4,300 원(일시불)\n잔액 0 원\n승인번호 20627256 (9957820119)\n매입사명 롯데(FDIK)\n승인일시 2020년08월09일 18:21",
+            "inferConfidence": 0.99536103,
+            "type": "NORMAL"
+        }
+    ]
+}
+
+console.log(result.title.name);
+console.log(result.title.inferText);
+    </script></body>
+</html>
+
