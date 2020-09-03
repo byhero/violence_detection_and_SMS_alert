@@ -1,7 +1,9 @@
-**sql user 계정 생성 및 권한 부여 **
-
-sqlplus / as sysdba
-
-create user receipt identified by receipt account unlock;
-
- grant connect ,resource to receipt;
+ java 기반인 spring툴을 이용해서 텍스트 이미지를 정보를 json형태의 데이터로 파싱
+ 
+ <파싱하는 과정> 
+ 1. 네이버 ocr api를 이용해야함
+ 2. 네이버 ocr api key값 정보를 불러와서 따로 저장함(이용요금 부과됨)
+ 3. spring 파싱하는 코드부분에 네이버 ocr api key 값을 넣어서 코드를 돌림 
+ 4. 코드를 돌리면 json 형태로 이미지에 있는 텍스트 데이터를 뽑아서 한줄로 나열해줌
+ 5. 한줄로 나열된 코드를 보기 좋게 정렬함
+ 6. 내가 원하는 텍스트 부분만 뽑아서 파싱해줌(코드는 직접 구현)
